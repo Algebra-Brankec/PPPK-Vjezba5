@@ -1,0 +1,118 @@
+﻿<local:FramedPage x:Class="Zadatak.EditMoviePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Zadatak"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="EditPage">
+
+    <Grid Background="{StaticResource GradientBackground}" x:Name="GridContainter">
+        <Button
+            x:Name="BtnBack"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="25"
+            Height="25"
+            Margin="30"
+            Click="BtnBack_Click">
+            <Image Source="/Assets/back.png"/>
+        </Button>
+
+        <Button
+            x:Name="BtnActors"
+            Content="Actors" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="80"
+            Height="25"
+            Margin="135,30,0,0" 
+            Click="BtnActors_Click">
+        </Button>
+
+        <Button
+            x:Name="BtnDirectors"
+            Content="Directors" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="80"
+            Height="25"
+            Margin="225,30,0,0" 
+            Click="BtnDirectors_Click">
+        </Button>
+
+        <Label 
+            Content="Name:" 
+            HorizontalAlignment="Left" 
+            Margin="57,89,0,0" 
+            VerticalAlignment="Top" 
+            Foreground="#FFF6F9FE"/>
+
+        <TextBox 
+            x:Name="TbFirstName"
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="134,88,0,0" 
+            TextWrapping="Wrap" 
+            Text="{Binding Name}" 
+            VerticalAlignment="Top" Width="171"/>
+
+        <Label 
+            Content="Description:" 
+            HorizontalAlignment="Left" 
+            Margin="57,133,0,0" 
+            VerticalAlignment="Top" 
+            Foreground="#FFF6F9FE"/>
+
+        <TextBox 
+            x:Name="TbLastName"
+            HorizontalAlignment="Left" 
+            Height="169" 
+            Margin="134,134,0,0" 
+            TextWrapping="Wrap" 
+            Text="{Binding Description}" 
+            VerticalAlignment="Top" Width="171"/>
+
+        <Button 
+            x:Name="BtnCommit"
+            Content="Commit" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="75" 
+            Foreground="WhiteSmoke"
+            Background="#13242C"            
+            Click="BtnCommit_Click"
+            Margin="86,322,0,0"/>
+
+        <Button 
+            x:Name="BtnUpload"
+            Content="Upload Image" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="106" 
+            Foreground="WhiteSmoke"
+            Background="DarkOrange"            
+            Click="BtnUpload_Click"
+            Margin="199,322,0,0"/>
+
+        <Border 
+            x:Name="PictureBorder"
+            BorderBrush="WhiteSmoke" 
+            BorderThickness="0.3"  
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top" Margin="0,79,48,0">
+            <Image
+                x:Name="Picture" 
+                Stretch="Uniform"
+                Width="198"
+                Height="252"
+                Source="{Binding Image}" 
+               />
+        </Border>
+
+
+    </Grid>
+</local:FramedPage>
