@@ -11,7 +11,7 @@ namespace Zadatak
         public MainWindow()
         {
             InitializeComponent();
-            Frame.Navigate(new ListPeoplePage(new ViewModels.MovieViewModel()) { Frame = Frame });
+            Frame.Navigate(new ListMoviePage(new ViewModels.MovieViewModel()) { Frame = Frame });
         }
     }
 }

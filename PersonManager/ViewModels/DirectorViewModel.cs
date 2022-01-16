@@ -15,10 +15,10 @@ namespace Zadatak.ViewModels
         public DirectorViewModel(int movieId)
         {
             Director = new ObservableCollection<Director>(RepositoryFactory.GetRepository().GetDirectors(movieId));
-            Director.CollectionChanged += People_CollectionChanged;
+            Director.CollectionChanged += Movie_CollectionChanged;
         }
 
-        private void People_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        private void Movie_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             switch (e.Action)
             {

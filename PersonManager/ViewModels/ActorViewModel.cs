@@ -15,10 +15,10 @@ namespace Zadatak.ViewModels
         public ActorViewModel(int movieId)
         {
             Actor = new ObservableCollection<Actor>(RepositoryFactory.GetRepository().GetActors(movieId));
-            Actor.CollectionChanged += People_CollectionChanged;
+            Actor.CollectionChanged += Movie_CollectionChanged;
         }
 
-        private void People_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        private void Movie_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             switch (e.Action)
             {

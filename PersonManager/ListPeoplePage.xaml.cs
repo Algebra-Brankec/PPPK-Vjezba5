@@ -8,9 +8,9 @@ namespace Zadatak
     /// <summary>
     /// Interaction logic for ListMoviesPage.xaml
     /// </summary>
-    public partial class ListPeoplePage : FramedPage
+    public partial class ListMoviePage : FramedPage
     {
-        public ListPeoplePage(MovieViewModel movieViewModel) : base(movieViewModel)
+        public ListMoviePage(MovieViewModel movieViewModel) : base(movieViewModel)
         {
             InitializeComponent();
             LvUsers.ItemsSource = movieViewModel.Movie;
