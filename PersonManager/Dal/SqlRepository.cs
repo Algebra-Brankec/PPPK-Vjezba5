@@ -24,7 +24,7 @@ namespace Zadatak.Dal
         //private static readonly string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
         private static readonly string cs = EncryptionUtils.Decrypt(ConfigurationManager.ConnectionStrings["cs"].ConnectionString, "fru1tc@k3");
 
-        //Server=localhost,1433;Database=MoviesPPPK;User Id=sa;Password=Kobescak123!;
+        //Server=localhost,1433;Database=MoviesPPPK;User Id=sa;Password=Pa$$w0rd;
         //Server=tcp:algebrapppk.database.windows.net,1433;Initial Catalog=Movie;Persist Security Info=False;User ID=sas;Password=D0r1anL0ta;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 
         public void AddMovie(Movie movie)
